@@ -11,7 +11,8 @@ export function Day({day}: props) {
         style={{
             display: "grid",
             gridTemplateRows: "repeat(28, 1fr)",
-            gridTemplateColumns: "100%"
+            gridTemplateColumns: "100%",
+            height: "100%"
         }}
     >
             {day?.cours.map((cours,id)=>(<Cours key={id} cours={cours}/>))}
