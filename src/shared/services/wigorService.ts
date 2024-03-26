@@ -3,7 +3,7 @@ import WigorParser from "../wigorParser/WigorParser"
 import IWeek from "../interfaces/IWeek";
 
 
-const API_ROOT = `${window.location.origin}/WebPsDyn.aspx`
+const API_ROOT = `${process.env.NODE_ENV == "development" ? window.location.origin : "https://edtmobiliteng.wigorservices.net"}/WebPsDyn.aspx`
 const USER = window.localStorage.getItem("username") ?? ""
 
 function buildURL(action: string, user: string, date: Date): URL {
