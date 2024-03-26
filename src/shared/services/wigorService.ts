@@ -4,7 +4,7 @@ import IWeek from "../interfaces/IWeek";
 
 
 const API_ROOT = `${window.location.origin}/WebPsDyn.aspx`
-const USER = "valentin.bonneau"
+const USER = window.localStorage.getItem("username") ?? ""
 
 function buildURL(action: string, user: string, date: Date): URL {
     const url = new URL(API_ROOT)
